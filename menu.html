@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Shop - Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔝 Navbar -->
+  <header>
+    <h1>☕ Coffee Haven</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="buy.html">Buy</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon">
+      <a href="buy.html">🛒 Cart <span id="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <!-- ☕ Menu Section -->
+  <section class="menu-section">
+    <h2>Our Coffee Menu</h2>
+
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Rich & bold flavor</p>
+        <span>₹120</span>
+        <button onclick="addToCart('Espresso - ₹120')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="C:\Users\subha\OneDrive\Pictures\cappuccino.jpg">
+        <h3>Cappuccino</h3>
+        <p>Classic Italian coffee</p>
+        <span>₹150</span>
+        <button onclick="addToCart('Cappuccino - ₹150')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="C:\Users\subha\OneDrive\Pictures\black coffee.jpg">
+        <h3>Black Coffee</h3>
+
+        <p>Milk blended coffee</p>
+        <span>₹160</span>
+        <button onclick="addToCart('Latte - ₹160')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="C:\Users\subha\OneDrive\Pictures\latte.jpg">
+        <h3>Mocha</h3>
+        <p>Chocolate flavored coffee</p>
+        <span>₹180</span>
+        <button onclick="addToCart('Mocha - ₹180')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="C:\Users\subha\OneDrive\Pictures\c4.jpg">
+        <h3>Cold Brew</h3>
+        <p>Chilled strong coffee</p>
+        <span>₹200</span>
+        <button onclick="addToCart('Cold Brew - ₹200')">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="C:\Users\subha\OneDrive\Pictures\c2.jpg">
+        <h3>Iced Latte</h3>
+        <p>Refreshing summer treat</p>
+        <span>₹190</span>
+        <button onclick="addToCart('Iced Latte - ₹190')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

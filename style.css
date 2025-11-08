@@ -1,0 +1,833 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf3;
+  color: #333;
+}
+
+/* Navbar */
+/* Header - Logo Left, Menu Right */
+header {
+  background: #3e2723;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  text-decoration: underline;
+  color: #ffcc80;
+}
+/* Hero Section with scrolling background */
+.hero {
+  background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') repeat-y;
+
+  background-size: cover;
+  background-attachment: fixed;
+  height: 60vh;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Items */
+.items, .menu-list {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fdf5f0;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+
+.remove-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #b71c1c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #3e2723;
+  color: white;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+/* 🛒 Cart icon style */
+.cart-icon a {
+  font-size: 18px;
+  background: #6f4e37;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.cart-icon a:hover {
+  background: #5a3d2b;
+}
+
+#cart-count {
+  background: #ffcc80;
+  color: #3e2723;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+/* Quantity control buttons */
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  background: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  background: #5a3d2b;
+}
+/* 🛒 Buy Page Modern Look */
+.cart-container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: #fffaf5;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 25px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cart-container h2 {
+  text-align: center;
+  color: #4e342e;
+  margin-bottom: 25px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8ede3;
+  margin: 12px 0;
+  padding: 12px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.cart-item span {
+  font-weight: 500;
+  color: #3e2723;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  background: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+  background: #4e342e;
+  transform: scale(1.05);
+}
+
+.remove-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.remove-btn:hover {
+  background: #b71c1c;
+  transform: scale(1.05);
+}
+
+#total-price {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #4e342e;
+}
+
+.checkout-btn {
+  display: block;
+  margin: 25px auto 0;
+  background: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #4e342e;
+  transform: scale(1.05);
+}
+/* ☕ Menu Page Styles */
+.menu-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #fdf3e7, #fff);
+}
+
+.menu-section h2 {
+  color: #4e342e;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background: #fffaf5;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.menu-item h3 {
+  margin: 8px 0;
+  color: #3e2723;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #6d4c41;
+  margin-bottom: 10px;
+}
+
+.menu-item span {
+  font-weight: bold;
+  color: #4e342e;
+}
+
+.menu-item button {
+  display: block;
+  margin: 10px auto 0;
+  background: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-item button:hover {
+  background: #4e342e;
+  transform: scale(1.05);
+}
+/* 🌅 Home Page Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1600") center/cover no-repeat;
+  animation: scrollBg 15s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+@keyframes scrollBg {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -1000px; }
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 25px 40px;
+  border-radius: 15px;
+  animation: fadeIn 2s ease;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  background: #6f4e37;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #4e342e;
+}
+
+/* 🌟 Featured Coffees Section */
+.featured {
+  background: linear-gradient(to bottom, #fffaf5, #fdf3e7);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured h2 {
+  color: #4e342e;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.featured-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.featured-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.featured-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.featured-item h3 {
+  color: #3e2723;
+}
+
+.featured-item span {
+  color: #4e342e;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+.featured-item button {
+  background: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.featured-item button:hover {
+  background: #4e342e;
+}
+/* 🌅 Home Page Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1600") center/cover no-repeat;
+  animation: scrollBg 15s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+@keyframes scrollBg {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -1000px; }
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 25px 40px;
+  border-radius: 15px;
+  animation: fadeIn 2s ease;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  background: #6f4e37;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #4e342e;
+}
+
+/* 🌟 Featured Coffees Section */
+.featured {
+  background: linear-gradient(to bottom, #fffaf5, #fdf3e7);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured h2 {
+  color: #4e342e;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.featured-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.featured-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.featured-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.featured-item h3 {
+  color: #3e2723;
+}
+
+.featured-item span {
+  color: #4e342e;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+.featured-item button {
+  background: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.featured-item button:hover {
+  background: #4e342e;
+}
+/* 💌 Contact Page Styles */
+.contact-section {
+  background: linear-gradient(to right, #fffaf5, #fdf3e7);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 90vh;
+}
+
+.contact-section h2 {
+  color: #4e342e;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  color: #6d4c41;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+form {
+  flex: 1 1 350px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  color: #4e342e;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-btn {
+  margin-top: 20px;
+  background: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #4e342e;
+}
+
+.contact-info {
+  flex: 1 1 250px;
+  background: #fffaf5;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.contact-info h3 {
+  color: #3e2723;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  color: #5d4037;
+}
+/* 🛒 Buy Page (Cart) Styles */
+.cart-section {
+  background: linear-gradient(to right, #fffaf5, #fdf3e7);
+  padding: 60px 20px;
+  min-height: 90vh;
+}
+
+.cart-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fffaf5;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 25px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cart-container h2 {
+  text-align: center;
+  color: #4e342e;
+  margin-bottom: 25px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8ede3;
+  margin: 12px 0;
+  padding: 12px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.cart-item span {
+  font-weight: 500;
+  color: #3e2723;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  background: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+  background: #4e342e;
+  transform: scale(1.05);
+}
+
+.remove-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.remove-btn:hover {
+  background: #b71c1c;
+  transform: scale(1.05);
+}
+
+#total-price {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #4e342e;
+}
+
+.checkout-btn {
+  display: block;
+  margin: 25px auto 0;
+  background: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #4e342e;
+  transform: scale(1.05);
+}
+/* ☕ Smooth Background Slideshow (No Gaps) */
+body {
+  background: url("images/bg1.jpg") repeat-x;
+
+  
+  background-size: cover;
+  animation: scrollBackground 3000s linear infinite;
+}
+
+/* Change scroll speed by editing “300s” above */
+
+@keyframes scrollBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 0;
+  }
+}
+/* ☕ Background Slideshow with Fade Effect */
+/* ☕ Smooth Background Slideshow (no gaps) */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.bg-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeSlide 0s infinite;
+}
+
+/* 👇 Each image starts just before the previous one ends */
+.bg-slideshow img:nth-child(1) {
+  animation-delay: 110s;
+}
+.bg-slideshow img:nth-child(2) {
+  animation-delay: 110s;
+}
+.bg-slideshow img:nth-child(3) {
+  animation-delay: 110s;
+}
+
+@keyframes fadeSlide {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}

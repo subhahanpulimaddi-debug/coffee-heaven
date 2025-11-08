@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Haven ☕</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Coffee Haven ☕</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="buy.html">🛒 <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Scrolling Background -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Coffee Haven</h1>
+      <p>Freshly brewed happiness in every cup ☕</p>
+      <a href="menu.html" class="hero-btn">Explore Menu</a>
+
+    </div>
+  </section>
+
+  <!-- Featured Coffees -->
+  <section class="featured"> 
+    <h2>Our Featured Coffees</h2>
+    <div class="featured-grid">
+      <div class="featured-item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Strong, rich, and full of energy.</p>
+        <span>₹120</span>
+        <button onclick="addToCart('Espresso', 120)">Add to Cart</button>
+      </div>
+      <div class="featured-item">
+        <img src="C:\Users\subha\OneDrive\Pictures\cappuccino.jpg">
+        <h3>Cappuccino</h3>
+        <p>Creamy froth and a cozy taste.</p>
+        <span>₹150</span>
+        <button onclick="addToCart('Cappuccino', 150)">Add to Cart</button>
+      </div>
+      <div class="featured-item">
+        <img src="C:\Users\subha\OneDrive\Pictures\flat white.jpg">
+        <h3>flat white</h3>
+        <p>Silky smooth with a touch of sweetness.</p>
+        <span>₹140</span>
+        <button onclick="addToCart('Latte', 140)">Add to Cart</button>
+      </div>
+ <div class="featured-item">
+        <img src="C:\Users\subha\OneDrive\Pictures\latte.jpg">
+        <h3>Latte</h3>
+        <p>Silky smooth with a touch of sweetness.</p>
+        <span>₹180</span>
+        <button onclick="addToCart('Latte', 140)">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Coffee Haven. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  
+</body>
+</html>
